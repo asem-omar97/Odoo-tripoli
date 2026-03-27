@@ -1,0 +1,23 @@
+<odoo>
+<record id="view_payslip_summary" model="ir.ui.view">
+<field name="name">attendance.summary</field>
+<field name="model">hr.payslip</field>
+<field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+<field name="arch" type="xml">
+<xpath expr="//sheet" position="inside">
+<group>
+<field name="total_overtime_hours"/>
+<field name="total_late_hours"/>
+</group>
+<field name="late_line_ids">
+<list>
+<field name="category_id"/>
+<field name="count"/>
+<field name="total_minutes"/>
+<field name="total_hours"/>
+</list>
+</field>
+</xpath>
+</field>
+</record>
+</odoo>

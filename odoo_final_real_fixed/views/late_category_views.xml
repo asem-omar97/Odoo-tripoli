@@ -1,0 +1,25 @@
+<odoo>
+<record id="view_late_category_list" model="ir.ui.view">
+<field name="name">late.category.list</field>
+<field name="model">hr.late.category</field>
+<field name="arch" type="xml">
+<list editable="bottom">
+<field name="name"/>
+<field name="minutes_from"/>
+<field name="minutes_to"/>
+</list>
+</field>
+</record>
+
+<record id="action_late_category" model="ir.actions.act_window">
+<field name="name">Late Categories</field>
+<field name="res_model">hr.late.category</field>
+<field name="view_mode">list</field>
+</record>
+
+<menuitem id="menu_late_category"
+          name="Late Categories"
+          parent="hr_attendance.menu_hr_attendance_root"
+          action="action_late_category"
+          sequence="50"/>
+</odoo>
